@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+    <h1>Registro de productos</h1>
+    <form action="{{ url_for('nuevo') }}" method="POST">
+        Nombre: <input type="text" name="nombre" required><br>
+        Cantidad: <input type="number" name="cantidad" required><br>
+        Precio: <input type="number" name="precio" required><br>
+        Fecha de vencimiento: <input type="date" name="fecha_vencimiento" required><br>
+        Categoría: 
+        <select name="categoria">
+            <option value="Bebidas">Bebidas</option>
+            <option value="Enlatados">Enlatados</option>
+            <option value="Cereales">Cereales</option>
+            <option value="Legumbres">Legumbres</option>
+            <option value="Lácteos">Lácteos</option>
+            <option value="Frutas y Verduras">Frutas y Verduras</option>
+            <option value="Carnes y Embutidos">Carnes y Embutidos</option>
+            <option value="Productos de higiene personal">Productos de higiene personal</option>
+            <option value="Productos de limpieza">Productos de limpieza</option>
+          </select>
+        <div class="bton">
+            <input type="submit">
+        </div>
+    </form>
+</body>
+</html>
